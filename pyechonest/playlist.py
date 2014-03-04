@@ -59,11 +59,14 @@ def basic(type='artist-radio', artist_id=None, artist=None, song_id=None, song=N
 
 
 def static(type='artist', artist_pick='song_hotttnesss-desc', variety=.5, artist_id=None, artist=None, song_id=None,
-           track_id=None, description=None, style=None, mood=None, results=15, max_tempo=None, min_tempo=None,
-           max_duration=None, min_duration=None, max_loudness=None, min_loudness=None, max_danceability=None,
-           min_danceability=None, max_energy=None, min_energy=None, artist_max_familiarity=None,
-           artist_min_familiarity=None, artist_max_hotttnesss=None, artist_min_hotttnesss=None,
-           song_max_hotttnesss=None, song_min_hotttnesss=None, min_longitude=None, max_longitude=None,
+           track_id=None, description=None, style=None, mood=None, results=15, max_tempo=None, 
+           min_tempo=None, target_tempo=None, max_duration=None, min_duration=None, target_duration=None,
+           max_loudness=None, min_loudness=None, target_loudness=None,
+           max_danceability=None, min_danceability=None, target_danceability=None,
+           max_energy=None, min_energy=None, target_energy=None, artist_max_familiarity=None,
+           artist_min_familiarity=None, target_artist_familiarity=None, artist_max_hotttnesss=None, 
+           artist_min_hotttnesss=None, target_artist_hotttnesss=None, song_max_hotttnesss=None, 
+           song_min_hotttnesss=None, target_song_hotttnesss=None, min_longitude=None, max_longitude=None,
            min_latitude=None, max_latitude=None, adventurousness=0.2, mode=None, key=None, buckets=None, sort=None,
            limit=False, seed_catalog=None, source_catalog=None, rank_type=None, test_new_things=None,
            artist_start_year_after=None, artist_start_year_before=None, artist_end_year_after=None,
@@ -98,34 +101,50 @@ def static(type='artist', artist_pick='song_hotttnesss-desc', variety=.5, artist
         max_tempo (float): The max tempo of song results
     
         min_tempo (float): The min tempo of song results
+
+        target_tempo (float): The target tempo of song results
     
         max_duration (float): The max duration of song results
     
         min_duration (float): The min duration of song results
+
+        target_duration (float): The target duration of song results
     
         max_loudness (float): The max loudness of song results
     
         min_loudness (float): The min loudness of song results
+
+        target_loudness (float): The target loudness of song results
     
         artist_max_familiarity (float): A float specifying the max familiarity of artists to search for
     
         artist_min_familiarity (float): A float specifying the min familiarity of artists to search for
+
+        artist_target_familiarity (float): A float specifying the target familiarity of artists to search for
     
         artist_max_hotttnesss (float): A float specifying the max hotttnesss of artists to search for
     
         artist_min_hotttnesss (float): A float specifying the max hotttnesss of artists to search for
+
+        artist_target_hotttness (float): A float specifying the target hotttness of artists to search for
     
         song_max_hotttnesss (float): A float specifying the max hotttnesss of songs to search for
     
         song_min_hotttnesss (float): A float specifying the max hotttnesss of songs to search for
+
+        song_target_hotttness (float): A float specifying the target hotttness of songs to search for
     
         max_energy (float): The max energy of song results
     
         min_energy (float): The min energy of song results
     
+        target_energy (float): The target energy of song results
+
         max_danceability (float): The max danceability of song results
     
         min_danceability (float): The min danceability of song results
+
+        target_danceability (float): The target danceability of song results
     
         mode (int): 0 or 1 (minor or major)
     
